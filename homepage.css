@@ -1,15 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #667eea, #764ba2);
     color: #fff;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Added padding to prevent cutting on smaller screens */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 .container {
@@ -27,11 +35,13 @@ h1 {
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 600;
+    word-wrap: break-word; /* Ensures long names don't break layout */
 }
 
 .details {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
+    width: 100%;
 }
 
 .details div {
@@ -39,6 +49,8 @@ h1 {
     padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .details span {
@@ -49,16 +61,42 @@ h1 {
 #logout {
     background: #ff4d4d;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 15px;
-    transition: 0.3s;
+    transition: background 0.3s;
+    width: 100%;
 }
 
 #logout:hover {
     background: #e60000;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .details {
+        font-size: 14px;
+    }
+
+    #logout {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
