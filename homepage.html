@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .details {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .details div {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .details span {
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        #logout {
+            background: #ff4d4d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        #logout:hover {
+            background: #e60000;
+        }
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="loggedUserFName"></span>!</h1>
+        <div class="details">
+            <div>Last Name: <span id="loggedUserLName"></span></div>
+            <div>Email: <span id="loggedUserEmail"></span></div>
+            <div>Date of Birth: <span id="loggedUserDOB"></span></div>
+            <div>Gender: <span id="loggedUserGender"></span></div>
+            <div>Phone: <span id="loggedUserPhone"></span></div>
+            <div>Address: <span id="loggedUserAddress"></span></div>
+            <div>Student ID: <span id="loggedUserID"></span></div>
+            <div>Course: <span id="loggedUserCourse"></span></div>
+        </div>
+        <button id="logout">Logout</button>
+    </div>
+</body>
+</html>
