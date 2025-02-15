@@ -60,7 +60,7 @@ onAuthStateChanged(auth, (user) => {
 document.getElementById("logout").addEventListener("click", async () => {
     try {
         await signOut(auth);
-        window.location.href = "signup.html"; // it will redirect to login page
+        window.location.href = "index.html"; // it will redirect to login page
     } catch (error) {
         console.error("Error signing out:", error);
     }

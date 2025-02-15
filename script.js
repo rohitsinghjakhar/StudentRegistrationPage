@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // it will redirect to the signup page when clicking "Don't have an account yet"
     if (signUpButton) {
         signUpButton.addEventListener("click", () => {
-            window.location.href = "signup.html";
+            window.location.href = "index.html";
         });
     }
 
